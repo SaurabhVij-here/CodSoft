@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://source.unsplash.com/1920x1080/?gaming') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .game-library {
+            margin-top: 2rem;
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .game-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+        }
+
+        .game-card:hover {
+            transform: scale(1.3); 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .game-card img {
+            max-width: 100%;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+    <script>
+        const backgroundImages = [
+            'https://source.unsplash.com/1920x1080/?gaming',
+            'background2.jpg',
+            'background3.jpg'
+            
+        ];
+
+        function setRandomBackground() {
+            const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+            document.body.style.backgroundImage = `url('${backgroundImages[randomIndex]}')`;
+        }
+
+        setRandomBackground();
+    </script>
+    <title>Game Recommendations</title>
+</head>
+<body>
+    <header>
+        <h1>Game Recommendations</h1>
+    </header>
+    <main>
+        <section class="game-library">
+            <h2>Game Library</h2>
+            <div class="games">
+                <div class="game-card">
+                    <img src="game1.jpg" alt="Game 1">
+                    <h3>Red Dead Redemption 2</h3>
+                    <p>The story is set in a fictionalized representation of the United States in 1899 and follows the exploits of Arthur Morgan...</p>
+                </div>
+                <div class="game-card">
+                    <img src="game2.jpg" alt="Game 2">
+                    <h3>God Of War</h3>
+                    <p>God of War is a third-person action-adventure video game. It features an over-the-shoulder free camera...</p>
+                </div>
+               
+                <div class="game-card">
+                    <img src="game3.jpg" alt="Game 3">
+                    <h3>The Witcher 3: Wild Hunt</h3>
+                    <p>The Witcher 3: Wild Hunt is an action role-playing game set in an open world environment, based on...</p>
+                </div>
+                <div class="game-card">
+                    <img src="game4.jpg" alt="Game 4">
+                    <h3>Assassin's Creed Valhalla</h3>
+                    <p>Assassin's Creed Valhalla is an action role-playing video game developed by Ubisoft...</p>
+                </div>
+                <div class="game-card">
+                    <img src="game5.jpg" alt="Game 5">
+                    <h3>Cyberpunk 2077</h3>
+                    <p>Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis...</p>
+                </div>
+                <div class="game-card">
+                    <img src="game6.jpg" alt="Game 6">
+                    <h3>Hollow Knight</h3>
+                    <p>Hollow Knight is a Metroidvania action-adventure game developed and published by Team Cherry...</p>
+                </div>
+                <div class="game-card">
+                    <img src="game7.jpg" alt="Game 7">
+                    <h3>The Last of Us Part II</h3>
+                    <p>The Last of Us Part II is an action-adventure game developed by Naughty Dog and published by Sony Interactive Entertainment...</p>
+                </div>
+                <div class="game-card">
+                    <img src="game8.jpg" alt="Game 8">
+                    <h3>Minecraft</h3>
+                    <p>Minecraft is a sandbox video game developed and published by Mojang Studios...</p>
+                </div>
+                <div class="game-card">
+                    <img src="game9.jpg" alt="Game 9">
+                    <h3>Fallout 4</h3>
+                    <p>Fallout 4 is an action role-playing game set in an open world environment, developed by Bethesda Game Studios...</p>
+                </div>
+                <div class="game-card">
+                    <img src="game10.jpg" alt="Game 10">
+                    <h3>Destiny 2</h3>
+                    <p>Destiny 2 is a free-to-play online-only multiplayer first-person shooter video game developed by Bungie...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
