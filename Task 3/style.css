@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    font-family: sans-serif;
+    outline: none;
+    
+}
+
+/* Define an array of background images */
+:root {
+    --bg-images: url('https://source.unsplash.com/1920x1080/?study'), url('https://source.unsplash.com/1920x1080/?books'), url('https://source.unsplash.com/1920x1080/?science');
+}
+
+/* Number-changing animation */
+@keyframes changeNumbers {
+    0% {
+        content: "0";
+    }
+    25% {
+        content: "123";
+    }
+    50% {
+        content: "456";
+    }
+    75% {
+        content: "789";
+    }
+    100% {
+        content: "012";
+    }
+}
+
+/* Apply the animation to the number container */
+.number-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.changing-number {
+    font-size: 50px;
+    color: white;
+    animation: changeNumbers 5s linear infinite alternate; /* Adjust duration and timing as needed */
+}
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background-color: #02d4f0; /* Change the background color */
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #08d108, 5px 5px 12px rgba(0, 0, 0, .16);
+    display: grid;
+    grid-template-columns: repeat(4, 68px);
+    transition: background-color 0.3s ease; /* Add a transition effect */
+}
+
+input {
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: #000000; /* Change the background color */
+    box-shadow: inset -5px -5px 12px #e0fc08, inset 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 30px;
+    color: #ecf0f3; /* Change the text color */
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+    transition: background-color 0.3s ease; /* Add a transition effect */
+}
+
+button {
+    height: 48px;
+    width: 48px;
+    background-color: #f6f6f7; /* Change the background color */
+    box-shadow: -5px -5px 12px #3f4a56, 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Add a transition effect */
+}
+
+.equal {
+    width: 115px;
+    border-radius: 40px;
+    background-color: #7cf000; /* Change the background color */
+    box-shadow: -5px -5px 12px #000000, 5px 5px 12px rgba(0, 0, 0, .16);
+    transition: background-color 0.3s ease; /* Add a transition effect */
+}
+
+/* Add a dynamic background image */
+body {
+    background-image: var(--bg-images);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: var(--bg-images);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(9px); /* Adjust the blur radius as needed */
+}
